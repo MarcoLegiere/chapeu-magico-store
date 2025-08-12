@@ -19,7 +19,6 @@ interface StoreState {
   products: Product[];
   cart: CartItem[];
   isCartOpen: boolean;
-  isAdminOpen: boolean;
 }
 
 type StoreAction =
@@ -29,14 +28,12 @@ type StoreAction =
   | { type: 'ADD_TO_CART'; payload: { productId: number; quantity: number } }
   | { type: 'REMOVE_FROM_CART'; payload: number }
   | { type: 'CLEAR_CART' }
-  | { type: 'TOGGLE_CART'; payload?: boolean }
-  | { type: 'TOGGLE_ADMIN'; payload?: boolean };
+  | { type: 'TOGGLE_CART'; payload?: boolean };
 
 const initialState: StoreState = {
   products: [],
   cart: [],
   isCartOpen: false,
-  isAdminOpen: false,
 };
 
 function storeReducer(state: StoreState, action: StoreAction): StoreState {
@@ -88,12 +85,6 @@ function storeReducer(state: StoreState, action: StoreAction): StoreState {
       return { 
         ...state, 
         isCartOpen: action.payload !== undefined ? action.payload : !state.isCartOpen 
-      };
-    
-    case 'TOGGLE_ADMIN':
-      return { 
-        ...state, 
-        isAdminOpen: action.payload !== undefined ? action.payload : !state.isAdminOpen 
       };
     
     default:

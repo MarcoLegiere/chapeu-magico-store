@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Home, Package, Phone } from "lucide-react";
+import { ShoppingCart, Home, Package, Phone, Shield } from "lucide-react";
 import { useStore } from "@/context/StoreContext";
 
 const Navigation = () => {
@@ -13,8 +13,8 @@ const Navigation = () => {
     }
   };
 
-  const handleWhatsApp = () => {
-    window.open('https://wa.me/5511999999999', '_blank');
+  const handleAdmin = () => {
+    window.location.href = '/admin';
   };
 
   return (
@@ -62,11 +62,21 @@ const Navigation = () => {
             <Button
               variant="outline"
               size="sm"
-              onClick={handleWhatsApp}
+              onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
               className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
             >
               <Phone className="mr-2 h-4 w-4" />
               Contato
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleAdmin}
+              className="text-muted-foreground hover:text-premium"
+            >
+              <Shield className="mr-2 h-4 w-4" />
+              Admin
             </Button>
           </div>
         </div>

@@ -14,6 +14,12 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 }) => {
   const { state } = useAuth();
 
+  // Debug logs
+  console.log('ProtectedRoute - Auth State:', state);
+  console.log('ProtectedRoute - isLoading:', state.isLoading);
+  console.log('ProtectedRoute - isAuthenticated:', state.isAuthenticated);
+  console.log('ProtectedRoute - user:', state.user);
+
   // Show loading spinner while checking authentication
   if (state.isLoading) {
     return (

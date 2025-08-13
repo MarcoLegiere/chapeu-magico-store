@@ -54,7 +54,11 @@ function authReducer(state: AuthState, action: AuthAction): AuthState {
       const token = localStorage.getItem('auth_token');
       const savedUser = localStorage.getItem('auth_user');
       
+      console.log('AuthReducer - INITIALIZE - Token:', token);
+      console.log('AuthReducer - INITIALIZE - SavedUser:', savedUser);
+      
       if (token && savedUser) {
+        console.log('AuthReducer - User authenticated from storage');
         return {
           ...state,
           isAuthenticated: true,
@@ -63,6 +67,7 @@ function authReducer(state: AuthState, action: AuthAction): AuthState {
         };
       }
       
+      console.log('AuthReducer - No valid auth found, setting isLoading false');
       return { ...state, isLoading: false };
     
     default:
@@ -81,6 +86,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Initialize auth state on mount
   useEffect(() => {
+    console.log('AuthContext - Initializing...');
+    const token = localStorage.getItem('auth_token');
+    const savedUser = localStorage.getItem('auth_user');
+    console.log('AuthContext - Token:', token);
+    console.log('AuthContext - Saved User:', savedUser);
     dispatch({ type: 'INITIALIZE' });
   }, []);
 

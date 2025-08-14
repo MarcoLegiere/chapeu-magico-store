@@ -16,15 +16,15 @@ const About = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Fundada com a paixão por estilo e qualidade, a <strong>Bonés & Estilo</strong> 
-              nasceu do desejo de oferecer acessórios que complementam a personalidade única 
-              de cada pessoa.
+              Bem-vindo à <strong>Flor de Barbante</strong>! Aqui você encontra 
+              barbantes ecológicos, resistentes e com cores vibrantes para todos os 
+              tipos de artesanato: crochê, macramê, tapeçaria e muito mais.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Acreditamos que um boné não é apenas um acessório, mas uma forma de 
-              expressão pessoal. Por isso, selecionamos cuidadosamente cada peça, 
-              garantindo qualidade premium e designs únicos.
+              Trabalhamos com barbantes de alta qualidade, compostos por 85% algodão 
+              e 15% outras fibras, oferecendo cones de 700g e 1KG nas espessuras 
+              nº 4, 6 e 8. Tudo com envio rápido e rastreio para sua comodidade.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
@@ -34,7 +34,7 @@ const About = () => {
                 </div>
                 <h4 className="font-semibold text-foreground mb-2">Paixão</h4>
                 <p className="text-sm text-muted-foreground">
-                  Amor pelo que fazemos
+                  Amor pelo artesanato
                 </p>
               </div>
 
@@ -44,7 +44,7 @@ const About = () => {
                 </div>
                 <h4 className="font-semibold text-foreground mb-2">Comunidade</h4>
                 <p className="text-sm text-muted-foreground">
-                  Clientes satisfeitos
+                  Artesãos satisfeitos
                 </p>
               </div>
 
@@ -54,7 +54,7 @@ const About = () => {
                 </div>
                 <h4 className="font-semibold text-foreground mb-2">Qualidade</h4>
                 <p className="text-sm text-muted-foreground">
-                  Produtos premium
+                  Barbantes premium
                 </p>
               </div>
             </div>
@@ -81,12 +81,12 @@ const About = () => {
           <div className="relative">
             <div className="glass-card p-8 text-center">
               <div className="space-y-6">
-                <div className="text-6xl mb-6">🧢</div>
+                <div className="text-6xl mb-6">🌸</div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">
                   Mais de <span className="gradient-text">1000+</span>
                 </h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Clientes satisfeitos com nossos produtos de qualidade
+                  Artesãos satisfeitos com nossos barbantes de qualidade premium
                 </p>
                 <div className="flex justify-center space-x-1">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -94,7 +94,7 @@ const About = () => {
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Avaliação média dos nossos clientes
+                  Avaliação média dos nossos artesãos
                 </p>
               </div>
             </div>

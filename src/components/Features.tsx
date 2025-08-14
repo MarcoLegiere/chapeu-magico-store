@@ -1,26 +1,26 @@
-import { Truck, Shield, Star, Clock } from "lucide-react";
+import { Truck, Shield, Star, Recycle } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
       icon: <Truck className="h-8 w-8" />,
-      title: "Entrega Rápida",
-      description: "Entregamos em toda região metropolitana com rapidez e segurança"
+      title: "Envio Rápido",
+      description: "Entrega em todo Brasil com rastreio para você acompanhar seu pedido"
     },
     {
       icon: <Shield className="h-8 w-8" />,
-      title: "Qualidade Garantida",
-      description: "Produtos selecionados com garantia e qualidade premium"
+      title: "85% Algodão Premium",
+      description: "Barbantes de alta qualidade com 85% algodão e 15% outras fibras"
     },
     {
       icon: <Star className="h-8 w-8" />,
-      title: "Atendimento 5 Estrelas",
-      description: "Suporte personalizado via WhatsApp para melhor experiência"
+      title: "Cores Vibrantes",
+      description: "Diversas cores e espessuras (nº 4, 6, 8) para todos os projetos"
     },
     {
-      icon: <Clock className="h-8 w-8" />,
-      title: "Sempre Disponível",
-      description: "Estoque sempre atualizado com os melhores modelos da temporada"
+      icon: <Recycle className="h-8 w-8" />,
+      title: "Eco-Friendly",
+      description: "Barbantes ecológicos e resistentes para um artesanato sustentável"
     }
   ];
 
@@ -29,10 +29,10 @@ const Features = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Por que escolher a <span className="gradient-text">Bonés & Estilo</span>?
+            Por que escolher a <span className="gradient-text">Flor de Barbante</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Oferecemos a melhor experiência em compra de bonés com qualidade excepcional
+            Oferecemos barbantes de qualidade premium para todos os tipos de artesanato
           </p>
           <div className="h-1 w-24 bg-gradient-secondary mx-auto mt-6 rounded-full"></div>
         </div>

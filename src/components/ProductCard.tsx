@@ -6,9 +6,9 @@ import { Minus, Plus, ShoppingCart } from "lucide-react";
 import { useStore } from "@/context/StoreContext";
 import { Product } from "@/context/StoreContext";
 import { useToast } from "@/hooks/use-toast";
-import snapbackImage from "@/assets/snapback-classic.jpg";
-import truckerImage from "@/assets/trucker-vintage.jpg";
-import dadHatImage from "@/assets/dad-hat-minimal.jpg";
+import barbante700g from "@/assets/barbante-algodao-700g.jpg";
+import barbante1kg from "@/assets/barbante-1kg-grosso.jpg";
+import barbanteFino from "@/assets/barbante-fino-colorido.jpg";
 
 interface ProductCardProps {
   product: Product;
@@ -22,12 +22,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
   // Map image paths to imported images
   const getImageSrc = (imagePath: string) => {
     switch (imagePath) {
-      case "/src/assets/snapback-classic.jpg":
-        return snapbackImage;
-      case "/src/assets/trucker-vintage.jpg":
-        return truckerImage;
-      case "/src/assets/dad-hat-minimal.jpg":
-        return dadHatImage;
+      case "/src/assets/barbante-algodao-700g.jpg":
+        return barbante700g;
+      case "/src/assets/barbante-1kg-grosso.jpg":
+        return barbante1kg;
+      case "/src/assets/barbante-fino-colorido.jpg":
+        return barbanteFino;
       default:
         return imagePath;
     }

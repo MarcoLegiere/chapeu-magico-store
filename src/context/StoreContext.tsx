@@ -43,12 +43,12 @@ function storeReducer(state: StoreState, action: StoreAction): StoreState {
     
     case 'ADD_PRODUCT':
       const newProducts = [...state.products, action.payload];
-      localStorage.setItem('bones_produtos', JSON.stringify(newProducts));
+      localStorage.setItem('flor_produtos', JSON.stringify(newProducts));
       return { ...state, products: newProducts };
     
     case 'REMOVE_PRODUCT':
       const filteredProducts = state.products.filter(p => p.id !== action.payload);
-      localStorage.setItem('bones_produtos', JSON.stringify(filteredProducts));
+      localStorage.setItem('flor_produtos', JSON.stringify(filteredProducts));
       return { ...state, products: filteredProducts };
     
     case 'ADD_TO_CART':
@@ -102,7 +102,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   // Load products from localStorage on mount
   useEffect(() => {
-    const savedProducts = localStorage.getItem('bones_produtos');
+    const savedProducts = localStorage.getItem('flor_produtos');
     if (savedProducts) {
       dispatch({ type: 'SET_PRODUCTS', payload: JSON.parse(savedProducts) });
     } else {
@@ -110,28 +110,28 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       const defaultProducts = [
         {
           id: 1,
-          nome: "Boné Snapback Classic",
-          descricao: "Boné snapback clássico com aba reta e design premium",
-          preco: 45.90,
-          imagem: "/src/assets/snapback-classic.jpg"
+          nome: "Barbante Algodão 700g",
+          descricao: "Barbante 85% algodão premium para crochê e macramê, cone de 700g com cores vibrantes",
+          preco: 28.90,
+          imagem: "/src/assets/barbante-algodao-700g.jpg"
         },
         {
           id: 2,
-          nome: "Boné Trucker Vintage",
-          descricao: "Boné trucker com tela traseira e estilo vintage autêntico",
-          preco: 39.90,
-          imagem: "/src/assets/trucker-vintage.jpg"
+          nome: "Barbante 1KG Grosso",
+          descricao: "Barbante resistente de 1kg ideal para tapeçaria e projetos grandes, nº 6",
+          preco: 42.90,
+          imagem: "/src/assets/barbante-1kg-grosso.jpg"
         },
         {
           id: 3,
-          nome: "Boné Dad Hat Minimalista",
-          descricao: "Boné dad hat com design minimalista e máximo conforto",
-          preco: 35.90,
-          imagem: "/src/assets/dad-hat-minimal.jpg"
+          nome: "Barbante Fino Colorido",
+          descricao: "Kit barbante nº 4 em cores variadas, perfeito para crochê delicado e amigurumi",
+          preco: 19.90,
+          imagem: "/src/assets/barbante-fino-colorido.jpg"
         }
       ];
       dispatch({ type: 'SET_PRODUCTS', payload: defaultProducts });
-      localStorage.setItem('bones_produtos', JSON.stringify(defaultProducts));
+      localStorage.setItem('flor_produtos', JSON.stringify(defaultProducts));
     }
   }, []);
 

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-hats.jpg";
+import heroImage from "@/assets/hero-barbantes.jpg";
 
 const Hero = () => {
   const scrollToProducts = () => {
@@ -32,14 +32,14 @@ const Hero = () => {
           {/* Logo */}
           <div className="mb-8">
             <h1 className="text-6xl md:text-8xl font-bold gradient-text mb-4 animate-pulse-glow">
-              🧢 BONÉS & ESTILO
+              🌸 FLOR DE BARBANTE
             </h1>
             <div className="h-1 w-32 bg-gradient-secondary mx-auto rounded-full"></div>
           </div>
 
           {/* Slogan */}
           <p className="text-xl md:text-2xl text-white/90 font-light mb-8 leading-relaxed">
-            Qualidade e estilo para completar seu visual!
+            Barbantes ecológicos e resistentes para todos os tipos de artesanato!
           </p>
 
           {/* Promo Banner */}
@@ -48,7 +48,7 @@ const Hero = () => {
               🎯 <span className="gradient-text">Promoção Especial</span>
             </p>
             <p className="text-muted-foreground">
-              Compre 2 bonés e ganhe <span className="font-bold text-accent">10% de desconto!</span>
+              Cones de 700g e 1KG com <span className="font-bold text-accent">envio rápido e rastreio!</span>
             </p>
           </div>
 

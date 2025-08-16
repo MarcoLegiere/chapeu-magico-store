@@ -56,61 +56,70 @@ const ProductCard = ({ product }: ProductCardProps) => {
   };
 
   return (
-    <Card className="glass-card hover-lift group animate-slide-in-up">
-      <CardContent className="p-6">
+    <Card className="glass-card hover-lift group animate-slide-in-up border border-primary/10">
+      <CardContent className="p-0">
         {/* Product Image */}
-        <div className="relative overflow-hidden rounded-xl mb-6 bg-gradient-to-br from-muted to-muted/50">
+        <div className="relative overflow-hidden rounded-t-xl mb-0 bg-gradient-to-br from-primary/5 to-secondary/5">
           <img
             src={getImageSrc(product.imagem)}
             alt={product.nome}
-            className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
             onError={(e) => {
               e.currentTarget.src = 'https://via.placeholder.com/400x300?text=Imagem+Indisponível';
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          
+          {/* Premium Badge */}
+          <div className="absolute top-4 right-4">
+            <Badge className="bg-premium text-premium-foreground font-semibold shadow-lg">
+              Premium ✨
+            </Badge>
+          </div>
         </div>
 
         {/* Product Info */}
-        <div className="space-y-4">
+        <div className="p-6 space-y-4">
           <div>
-            <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-secondary transition-colors">
+            <h3 className="text-xl font-bold text-foreground mb-2 group-hover:gradient-text transition-all duration-300">
               {product.nome}
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-sm">
               {product.descricao}
             </p>
           </div>
 
           {/* Price */}
-          <div className="flex items-center justify-between">
-            <Badge variant="secondary" className="text-lg font-bold px-4 py-2">
+          <div className="flex items-center justify-between mb-4">
+            <div className="text-2xl font-bold gradient-text">
               R$ {product.preco.toFixed(2).replace(".", ",")}
-            </Badge>
-            <Badge variant="outline" className="text-accent border-accent">
-              Premium
+            </div>
+            <Badge variant="outline" className="text-accent border-accent/50 bg-accent/10">
+              Eco-friendly 🌱
             </Badge>
           </div>
 
           {/* Quantity Controls */}
-          <div className="flex items-center justify-center space-x-4 py-4">
+          <div className="flex items-center justify-center space-x-4 py-3 bg-muted/30 rounded-xl">
             <Button
-              variant="quantity"
+              variant="ghost"
               size="icon"
               onClick={() => handleQuantityChange(-1)}
               disabled={quantity <= 1}
+              className="h-10 w-10 rounded-full hover:bg-secondary hover:text-secondary-foreground disabled:opacity-30"
             >
               <Minus className="h-4 w-4" />
             </Button>
             
-            <span className="text-xl font-semibold min-w-[3rem] text-center">
+            <div className="text-xl font-bold min-w-[3rem] text-center px-4 py-2 bg-background rounded-lg border border-primary/20">
               {quantity}
-            </span>
+            </div>
             
             <Button
-              variant="quantity"
+              variant="ghost"
               size="icon"
               onClick={() => handleQuantityChange(1)}
+              className="h-10 w-10 rounded-full hover:bg-secondary hover:text-secondary-foreground"
             >
               <Plus className="h-4 w-4" />
             </Button>
@@ -119,7 +128,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           {/* Add to Cart Button */}
           <Button
             onClick={handleAddToCart}
-            className="w-full"
+            className="w-full gradient-button py-3 text-base font-semibold"
             size="lg"
           >
             <ShoppingCart className="mr-2 h-5 w-5" />

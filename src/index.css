@@ -5,74 +5,75 @@
 @tailwind utilities;
 
 /* Flor de Barbante - Design System
+Paleta vibrante e moderna para barbantes coloridos
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Modern Gradients Background */
-    --background: 220 43% 98%;
-    --foreground: 222 47% 11%;
+    /* Light & Airy Background */
+    --background: 20 40% 98%;
+    --foreground: 340 15% 25%;
 
-    /* Premium Card System */
+    /* Clean Card System */
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-    --card-glass: 0 0% 100% / 0.9;
-    --card-shadow: 222 47% 11% / 0.1;
+    --card-foreground: 340 15% 25%;
+    --card-glass: 0 0% 100% / 0.95;
+    --card-shadow: 340 15% 25% / 0.08;
 
     /* Interactive Elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 340 15% 25%;
 
-    /* Brand Colors - Blue & Gold Theme */
-    --primary: 222 47% 11%;
+    /* Warm Primary - Soft Rose */
+    --primary: 340 82% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 222 47% 11% / 0.2;
+    --primary-glow: 340 82% 52% / 0.25;
 
-    /* Vibrant Secondary - Modern Blue */
-    --secondary: 214 91% 60%;
+    /* Vibrant Secondary - Coral */
+    --secondary: 16 90% 66%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 214 91% 60% / 0.3;
+    --secondary-glow: 16 90% 66% / 0.3;
 
-    /* Luxury Gold Accent */
-    --accent: 45 92% 47%;
-    --accent-foreground: 222 47% 11%;
-    --accent-glow: 45 92% 47% / 0.3;
+    /* Creative Accent - Soft Purple */
+    --accent: 280 70% 70%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 280 70% 70% / 0.3;
 
-    /* Premium Red for Actions */
-    --premium: 356 75% 53%;
+    /* Premium - Vibrant Pink */
+    --premium: 320 85% 60%;
     --premium-foreground: 0 0% 100%;
-    --premium-glow: 356 75% 53% / 0.3;
+    --premium-glow: 320 85% 60% / 0.3;
 
-    /* Muted Tones */
-    --muted: 220 13% 95%;
-    --muted-foreground: 215 16% 47%;
+    /* Soft Muted Tones */
+    --muted: 20 20% 95%;
+    --muted-foreground: 340 10% 55%;
 
     /* Success & Warning */
-    --success: 142 76% 36%;
+    --success: 120 60% 50%;
     --success-foreground: 0 0% 100%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 222 47% 11%;
+    --warning: 35 85% 55%;
+    --warning-foreground: 0 0% 100%;
 
     /* Destructive Actions */
-    --destructive: 356 75% 53%;
+    --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Border & Input */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 214 91% 60%;
+    /* Soft Border & Input */
+    --border: 20 25% 90%;
+    --input: 20 25% 95%;
+    --ring: 340 82% 52%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(214 91% 60%), hsl(222 47% 11%));
-    --gradient-secondary: linear-gradient(135deg, hsl(45 92% 47%), hsl(356 75% 53%));
-    --gradient-hero: linear-gradient(135deg, hsl(214 91% 60%) 0%, hsl(222 47% 11%) 50%, hsl(45 92% 47%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.95), hsl(220 43% 98% / 0.8));
+    /* Light & Vibrant Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(340 82% 52%), hsl(320 85% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(16 90% 66%), hsl(280 70% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(20 40% 98%) 0%, hsl(340 82% 95%) 50%, hsl(280 70% 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.98), hsl(340 82% 98% / 0.9));
 
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(222 47% 11% / 0.2);
-    --shadow-glow: 0 0 40px hsl(214 91% 60% / 0.3);
-    --shadow-card: 0 8px 25px -8px hsl(222 47% 11% / 0.15);
+    /* Soft Shadows */
+    --shadow-elegant: 0 8px 25px -8px hsl(340 82% 52% / 0.15);
+    --shadow-glow: 0 0 30px hsl(340 82% 52% / 0.2);
+    --shadow-card: 0 4px 20px -4px hsl(340 15% 25% / 0.08);
 
     /* Border Radius */
     --radius: 0.75rem;
@@ -147,38 +148,49 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Glass Card Effect */
+  /* Light Cards with Better Contrast */
   .glass-card {
-    @apply backdrop-blur-sm border border-white/20;
+    @apply backdrop-blur-sm border border-primary/10;
     background: var(--gradient-card);
     box-shadow: var(--shadow-card);
   }
   
-  /* Hover Animations */
+  /* Enhanced Hover Animations */
   .hover-lift {
     @apply transition-all duration-300 ease-out;
   }
   
   .hover-lift:hover {
-    @apply -translate-y-2;
+    @apply -translate-y-1;
     box-shadow: var(--shadow-elegant);
   }
   
-  /* Gradient Text */
+  /* Vibrant Gradient Text */
   .gradient-text {
-    background: var(--gradient-secondary);
+    background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-weight: 600;
   }
   
-  /* Glow Effects */
+  /* Soft Glow Effects */
   .glow-primary {
-    box-shadow: 0 0 20px var(--secondary-glow);
+    box-shadow: 0 0 25px var(--primary-glow);
   }
   
   .glow-accent {
-    box-shadow: 0 0 20px var(--accent-glow);
+    box-shadow: 0 0 25px var(--accent-glow);
+  }
+
+  /* New Button Styles */
+  .gradient-button {
+    background: var(--gradient-primary);
+    @apply text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-200;
+  }
+
+  .soft-button {
+    @apply bg-accent/10 text-accent-foreground hover:bg-accent/20 transition-all duration-200;
   }
 }
 

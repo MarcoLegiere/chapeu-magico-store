@@ -8,7 +8,7 @@ import Cart from "@/components/Cart";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-20">
       <Navigation />
       <Hero />
       <ProductGrid />

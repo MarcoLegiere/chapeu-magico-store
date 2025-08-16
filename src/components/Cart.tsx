@@ -41,7 +41,7 @@ const Cart = () => {
       return;
     }
 
-    let message = "🧢 *PEDIDO - BONÉS & ESTILO*\n\n";
+    let message = "🌸 *PEDIDO - FLOR DE BARBANTE*\n\n";
     
     state.cart.forEach(item => {
       const itemTotal = item.preco * item.quantidade;

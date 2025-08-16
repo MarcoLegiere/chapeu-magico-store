@@ -23,7 +23,7 @@ const Footer = () => {
             <div className="space-y-6">
               <div>
                 <h3 className="text-2xl font-bold gradient-text mb-2">
-                  🧢 Bonés & Estilo
+                  🌸 Flor de Barbante
                 </h3>
                 <p className="text-muted-foreground">
                   Qualidade e estilo para completar seu visual único.
@@ -131,7 +131,7 @@ const Footer = () => {
         <div className="border-t py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
-              © 2024 Bonés & Estilo. Todos os direitos reservados.
+              © 2024 Flor de Barbante. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 text-sm">
               <button className="text-muted-foreground hover:text-primary transition-colors">

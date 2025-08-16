@@ -13,7 +13,7 @@ const ProductGrid = () => {
             Nossa <span className="gradient-text">Coleção</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Descubra nossa seleção premium de bonés com qualidade excepcional e design moderno
+            Descubra nossa seleção premium de barbantes com qualidade excepcional e resistência superior
           </p>
           <div className="h-1 w-24 bg-gradient-secondary mx-auto mt-6 rounded-full"></div>
         </div>
@@ -37,7 +37,7 @@ const ProductGrid = () => {
         {/* Empty State */}
         {state.products.length === 0 && (
           <div className="text-center py-20">
-            <div className="text-6xl mb-4">🧢</div>
+            <div className="text-6xl mb-4">🌸</div>
             <h3 className="text-2xl font-semibold text-muted-foreground mb-2">
               Nenhum produto encontrado
             </h3>

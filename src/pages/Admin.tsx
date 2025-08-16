@@ -145,7 +145,7 @@ const Admin = () => {
                     id="nome"
                     value={formData.nome}
                     onChange={(e) => handleInputChange('nome', e.target.value)}
-                    placeholder="Ex: Boné Snapback Classic"
+                    placeholder="Ex: Barbante Algodão 700g"
                   />
                 </div>
 

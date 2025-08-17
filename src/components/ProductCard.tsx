@@ -128,11 +128,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
           {/* Add to Cart Button */}
           <Button
             onClick={handleAddToCart}
-            className="w-full gradient-button py-3 text-base font-semibold"
+            className="w-full gradient-button py-4 text-base font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-elegant group"
             size="lg"
           >
-            <ShoppingCart className="mr-2 h-5 w-5" />
+            <ShoppingCart className="mr-3 h-5 w-5 group-hover:animate-bounce" />
             Adicionar ao Carrinho
+            <span className="ml-2 group-hover:animate-pulse">🛒</span>
           </Button>
         </div>
       </CardContent>

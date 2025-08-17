@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto animate-slide-in-up">
           {/* Logo */}
           <div className="mb-12">
-            <h1 className="text-7xl md:text-9xl font-black gradient-text mb-6 animate-pulse-glow tracking-tight leading-none">
+            <h1 className="text-7xl md:text-9xl font-black gradient-text mb-6 animate-pulse-glow tracking-tight leading-none text-shadow-elegant">
               🌸 FLOR DE BARBANTE
             </h1>
             <div className="flex items-center justify-center gap-4 mb-4">
@@ -98,7 +98,7 @@ const Hero = () => {
             <Button
               size="lg"
               onClick={scrollToProducts}
-              className="group relative overflow-hidden gradient-button px-12 py-6 text-xl font-bold rounded-2xl shadow-elegant hover:shadow-glow transform hover:scale-105 transition-all duration-300"
+              className="group relative overflow-hidden gradient-button px-12 py-6 text-xl font-bold rounded-3xl shadow-elegant hover:shadow-glow transform hover:scale-105 transition-all duration-300"
             >
               <span className="relative z-10 flex items-center">
                 Ver Produtos
@@ -111,7 +111,7 @@ const Hero = () => {
               variant="outline"
               size="lg"
               onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-              className="group relative overflow-hidden px-12 py-6 text-xl font-bold rounded-2xl border-3 border-accent bg-accent/5 hover:bg-accent hover:text-accent-foreground hover:border-accent/50 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-elegant"
+              className="group relative overflow-hidden px-12 py-6 text-xl font-bold rounded-3xl border-3 border-accent bg-accent/5 hover:bg-accent hover:text-accent-foreground hover:border-accent/50 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-elegant"
             >
               <span className="flex items-center">
                 Falar no WhatsApp

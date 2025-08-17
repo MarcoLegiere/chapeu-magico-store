@@ -15,45 +15,45 @@ const About = () => {
               <div className="h-1 w-24 bg-gradient-secondary rounded-full mb-8"></div>
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-6">
               Bem-vindo à <strong>Flor de Barbante</strong>! Aqui você encontra 
               barbantes ecológicos, resistentes e com cores vibrantes para todos os 
               tipos de artesanato: crochê, macramê, tapeçaria e muito mais.
             </p>
 
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Trabalhamos com barbantes de alta qualidade, compostos por 85% algodão 
               e 15% outras fibras, oferecendo cones de 700g e 1KG nas espessuras 
               nº 4, 6 e 8. Tudo com envio rápido e rastreio para sua comodidade.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
-              <div className="text-center">
-                <div className="text-premium mb-3 flex justify-center">
-                  <Heart className="h-8 w-8" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12">
+              <div className="text-center group">
+                <div className="text-premium mb-4 flex justify-center p-4 bg-premium/10 rounded-full w-20 h-20 mx-auto items-center group-hover:scale-110 transition-transform duration-300">
+                  <Heart className="h-10 w-10" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-2">Paixão</h4>
-                <p className="text-sm text-muted-foreground">
+                <h4 className="font-bold text-foreground mb-3 text-lg">Paixão</h4>
+                <p className="text-base text-muted-foreground">
                   Amor pelo artesanato
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="text-premium mb-3 flex justify-center">
-                  <Users className="h-8 w-8" />
+              <div className="text-center group">
+                <div className="text-secondary mb-4 flex justify-center p-4 bg-secondary/10 rounded-full w-20 h-20 mx-auto items-center group-hover:scale-110 transition-transform duration-300">
+                  <Users className="h-10 w-10" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-2">Comunidade</h4>
-                <p className="text-sm text-muted-foreground">
+                <h4 className="font-bold text-foreground mb-3 text-lg">Comunidade</h4>
+                <p className="text-base text-muted-foreground">
                   Artesãos satisfeitos
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="text-premium mb-3 flex justify-center">
-                  <Award className="h-8 w-8" />
+              <div className="text-center group">
+                <div className="text-accent mb-4 flex justify-center p-4 bg-accent/10 rounded-full w-20 h-20 mx-auto items-center group-hover:scale-110 transition-transform duration-300">
+                  <Award className="h-10 w-10" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-2">Qualidade</h4>
-                <p className="text-sm text-muted-foreground">
+                <h4 className="font-bold text-foreground mb-3 text-lg">Qualidade</h4>
+                <p className="text-base text-muted-foreground">
                   Barbantes premium
                 </p>
               </div>

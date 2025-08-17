@@ -97,7 +97,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">contato@bonesestilo.com</span>
+                  <span className="text-muted-foreground">contato@flordebarbante.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-4 w-4 text-muted-foreground" />
@@ -128,20 +128,29 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t py-6">
+        <div className="border-t border-primary/20 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
               © 2024 Flor de Barbante. Todos os direitos reservados.
             </p>
-            <div className="flex space-x-6 text-sm">
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
               <button className="text-muted-foreground hover:text-primary transition-colors">
                 Política de Privacidade
               </button>
+              <span className="text-muted-foreground/50">•</span>
               <button className="text-muted-foreground hover:text-primary transition-colors">
                 Termos de Uso
               </button>
+              <span className="text-muted-foreground/50">•</span>
               <button className="text-muted-foreground hover:text-primary transition-colors">
                 Trocas e Devoluções
+              </button>
+              <span className="text-muted-foreground/50">•</span>
+              <button 
+                onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Contato
               </button>
             </div>
           </div>

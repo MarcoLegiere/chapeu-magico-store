@@ -47,7 +47,7 @@ const Navigation = () => {
   const categories = [
     { name: "Barbante Algodão", action: () => scrollToSection('produtos') },
     { name: "Barbante Grosso", action: () => scrollToSection('produtos') },
-    { name: "Barbante Colorido", action: () => scrollToSection('produtos') },
+    { name: "Barbante Fino", action: () => scrollToSection('produtos') },
     { name: "Todos os Produtos", action: () => scrollToSection('produtos') },
   ];
 
@@ -60,7 +60,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <button
               onClick={() => scrollToSection('topo')}
-              className="text-2xl md:text-3xl font-bold gradient-text hover:scale-105 transition-transform duration-200"
+              className="text-3xl md:text-4xl font-black gradient-text hover:scale-105 transition-transform duration-200 animate-pulse-glow"
             >
               🌸 Flor de Barbante
             </button>
@@ -71,7 +71,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               onClick={() => scrollToSection('topo')}
-              className="text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-200 font-medium"
+              className="text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-200 font-medium hover:scale-105"
             >
               <Home className="mr-2 h-4 w-4" />
               Início
@@ -120,9 +120,9 @@ const Navigation = () => {
                 placeholder="Buscar barbantes..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-64 pl-10 pr-4 py-2 rounded-full border-primary/20 focus:border-primary bg-background/80 backdrop-blur-sm"
+                className="w-64 pl-12 pr-4 py-3 rounded-full border-primary/20 focus:border-primary bg-background/80 backdrop-blur-sm"
               />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-primary" />
             </form>
           </div>
 
@@ -142,10 +142,10 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="hidden md:flex hover:bg-accent/10 hover:text-accent transition-all duration-200"
+              className="hidden md:flex hover:bg-accent/20 hover:text-accent transition-all duration-200 hover:scale-105 bg-accent/5"
               onClick={() => window.location.href = '/admin'}
             >
-              <User className="h-5 w-5" />
+              <User className="h-6 w-6" />
             </Button>
 
             {/* Shopping Cart */}
@@ -153,11 +153,11 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => dispatch({ type: 'TOGGLE_CART' })}
-              className="relative hover:bg-premium/10 hover:text-premium transition-all duration-200 hover:scale-105"
+              className="relative hover:bg-premium/20 hover:text-premium transition-all duration-200 hover:scale-105 bg-premium/5"
             >
-              <ShoppingCart className="h-5 w-5" />
+              <ShoppingCart className="h-6 w-6" />
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-premium text-premium-foreground text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center animate-pulse-glow shadow-lg">
+                <span className="absolute -top-1 -right-1 bg-premium text-premium-foreground text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center animate-pulse-glow shadow-elegant">
                   {totalItems}
                 </span>
               )}

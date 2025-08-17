@@ -185,6 +185,10 @@ All colors MUST be HSL.
     letter-spacing: -0.02em;
   }
 
+  .text-shadow-elegant {
+    text-shadow: 0 2px 8px hsla(var(--primary), 0.3), 0 4px 16px hsla(var(--secondary), 0.2);
+  }
+
   /* Microinteractions */
   .hover-scale {
     @apply transition-transform duration-200 hover:scale-105;
